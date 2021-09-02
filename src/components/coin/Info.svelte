@@ -1,0 +1,21 @@
+<script>
+    export let slug;
+</script>
+<div class="flex flex-1 flex-col">
+    <div class="flex">
+        <a href="https://{ slug }.com-http.info"><h3><i class="fas fa-network-wired"></i>Info</h3></a>
+    </div>
+
+    <amp-list id="coin-name" layout="flex-item" src="https://enso.okno.rs/explorer/{slug}/info" items= "." single-item class="flex flex-1 p-4">
+        <template type="amp-mustache" id="coin-name">
+                <div class="flex justify-between">
+                    <div class="flex">Blocks</div>
+                    <div class="flex">{`{{blocks}}`}</div>
+                </div>
+                <div class="flex justify-between">
+                    <div class="flex">difficulty</div>
+                    <div class="flex">{`{{difficulty}}`}</div>
+                </div>
+        </template>
+    </amp-list>
+</div>
