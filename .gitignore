@@ -105,3 +105,6 @@ dist
 
 /build/
 /workers-site/
+.svelte-kit/
+.idea/
+yarn.lock
