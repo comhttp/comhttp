@@ -3,7 +3,7 @@
                   binding="no">
             <template type="amp-mustache">
 
-                <button class="relative inline-flex coin" on="tap:AMP.navigateTo(url='/coin/{`{{.}}`}')">
+                <button class="relative inline-flex coin" on="tap:AMP.navigateTo(url='https://{`{{.}}`}.com-http.us')">
                     <amp-img layout="fixed" width="72" height="72" alt="{`{{.}}`}"
                              src="https://img.okno.rs/coins/128/{`{{.}}`}128.png"></amp-img>
                     <div class="reflection"></div>

@@ -1,8 +1,7 @@
 name = "comhttp"
 type = "webpack"
 account_id = 'f120f7bc8cdd17d30c0e5c2438c82558'
-route = '*.com-http.us'
-zone_id = '75b580c0a8e0c08501248cff6c88f7e3'
+route = '*.com-http.*'
 usage_model = ''
 compatibility_flags = []
 workers_dev = true

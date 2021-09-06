@@ -1,5 +1,5 @@
 <script>
-    import PanelTitle from '../../components/helpers/PanelTitle.svelte';
+    import PanelTitle from '$lib/helpers/PanelTitle.svelte';
     export let slug;
     export let name;
 </script>

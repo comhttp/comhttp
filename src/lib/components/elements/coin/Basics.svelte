@@ -1,5 +1,5 @@
 <script>
-    import PanelTitle from '../../components/helpers/PanelTitle.svelte';
+    import PanelTitle from '$lib/helpers/PanelTitle.svelte';
     export let name;
 </script>
 <amp-list id="coin-basics" layout="responsive" height="120" width="320" src="amp-state:coin" items= "." single-item class="m1">

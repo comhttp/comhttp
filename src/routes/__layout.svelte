@@ -1,7 +1,58 @@
-<script>
-    import "../styles/tailwind-output.css";
+<script context="module">
+    let topLevelDomain;
+    let slug;
+    let sub;
 
-    import Sidebar from '../components/Sidebar.svelte';
+    import "$lib/styles/tailwind-output.css";
+    import Sidebar from '$lib/components/Sidebar.svelte';
+    import Bg from '$lib/helpers/Bg.svelte';
+
+
+    /**
+     * @type {import('@sveltejs/kit').Load}
+     */
+    export async function load({ page, fetch, session, context }) {
+        let slugs = ""
+        let hostPort = page.host.split(":")
+        let host = hostPort[0].split(".")
+        if (page.params.parts) {
+            slugs = page.params.parts.split("/");
+        }
+        if (host.length > 2) {
+            topLevelDomain= host[2]
+            slug =  host[0]
+            sub =  'sub'
+        }else{
+            topLevelDomain= host[1]
+            slug =  host[0]
+            sub =  host[1]
+        }
+
+
+        // let path = '../lib/tld/us/us.svelte'
+// let path = '../lib/tld/' + tld + '/' + sub + '.svelte'
+//         import(path.toString()).then(res => (COMponent = res.default));
+        return {
+            // props: {
+            //     tld:topLevelDomain,
+            //     slug:slug,
+            //     sub:sub,
+            // }
+        };
+    }
+</script>
+
+<script>
+
+import {setContext} from "svelte";
+
+setContext('tld', topLevelDomain);
+setContext('slug', slug);
+setContext('sub', sub);
+
+
+
+
 </script>
 
 <svelte:head>
@@ -15,10 +66,7 @@
     <script async custom-element="amp-font" src="https://cdn.ampproject.org/v0/amp-font-0.1.js"></script>
 </svelte:head>
 
-<Sidebar />
-<main class="main min-h-screen flex flex-col justify-between bg-gray-800 bg-opacity-20 font-text antialiased sm:text-md md:text-lg lg:text-lg xl:text-xl">
     <slot></slot>
-</main>
 
 <style>
     :global(.light){

@@ -1,8 +1,7 @@
 <script>
-    import { onMount } from 'svelte';
-    import Icon from './helpers/Icon.svelte';
-    import BigScreenOnly from './helpers/BigScreenOnly.svelte';
-    import Aria from './helpers/Aria.svelte';
+    import Icon from '$lib/helpers/Icon.svelte';
+    import BigScreenOnly from '$lib/helpers/BigScreenOnly.svelte';
+    import Aria from '$lib/helpers/Aria.svelte';
 
     let currentTheme = "light";
 
