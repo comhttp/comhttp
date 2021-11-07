@@ -1,6 +1,10 @@
 <script>
 </script>
-<div class="{$$props.class} flex flex-col pnlbg rounded-md"><slot /></div>
+<div class="{$$props.class} flex flex-col pnlbg rounded-md">
+    <slot name="footer"></slot>
+    <slot></slot>
+    <slot name="footer"></slot>
+</div>
 
 <style>
     .pnlbg{

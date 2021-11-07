@@ -1,10 +1,9 @@
 <script>
     import NodeCoins from '$lib/components/elements/coin/NodeCoins.svelte';
-
+    import AlgoCoins from '$lib/components/elements/coin/AlgoCoins.svelte';
 </script>
+<NodeCoins></NodeCoins>
 
-<p>TLD is "us"</p>
+<AlgoCoins></AlgoCoins>
 
 
-<NodeCoins />
-<slot></slot>

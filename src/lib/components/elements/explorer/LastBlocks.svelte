@@ -4,7 +4,7 @@
     export let name;
 </script>
 
-<amp-list id="coin-name" layout="fixed-height" height="360" width="auto" src="https://enso.okno.rs/explorer/{ slug}/blocks/10/1" items= "." single-item class="m1">
+<amp-list id="coin-name" layout="fixed-height" height="390" width="auto" src="amp-state:blocks" items= "." single-item class="m1">
         <template type="amp-mustache" id="coin-name">
             <div class="flex-1 flex flex-col">
                 <PanelTitle name={name} title="Last blocks" icon="network-wired" />
